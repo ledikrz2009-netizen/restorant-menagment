@@ -1,0 +1,41 @@
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A1F7C1F2-1111-4E9B-9A0B-111111111111}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RestaurantManagementSystem.UI</RootNamespace>
+    <AssemblyName>RestaurantManagementSystem.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="Microsoft.VisualBasic" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="SessionContext.cs" />
+    <Compile Include="Forms\LoginForm.cs" />
+    <Compile Include="Forms\DashboardForm.cs" />
+    <Compile Include="Forms\TableManagementForm.cs" />
+    <Compile Include="Forms\MenuManagementForm.cs" />
+    <Compile Include="Forms\OrderManagementForm.cs" />
+    <Compile Include="Forms\StaffManagementForm.cs" />
+    <Compile Include="Forms\ReportsForm.cs" />
+    <Compile Include="Forms\ReceiptPreviewForm.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestaurantManagementSystem.BLL\RestaurantManagementSystem.BLL.csproj">
+      <Project>{B2F7C1F2-2222-4E9B-9A0B-222222222222}</Project>
+      <Name>RestaurantManagementSystem.BLL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
